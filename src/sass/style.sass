@@ -1,14 +1,15 @@
 $main-color: #1eacc7
 $second-color: #ff5656
 
+=btn_hover 
+	&:hover 
+		background-image: none 
+		background-color: $main-color
 
-=btn_hover
-	&:hover
-		background-image: none
-		background-color: $main-color	
-	
 *
 	font-family: 'Roboto', sans-serif
+a
+	text-decoration: none		
 
 header
 	position: relative
@@ -31,6 +32,9 @@ nav
 		color: #ffffff
 		font-size: 15px
 		font-weight: 300
+		&:hover
+			text-decoration: none
+			color: $main-color
 	&_item
 		border-right: 2px dotted black
 		padding-right: 28px
@@ -144,6 +148,8 @@ nav
 	&_white 
 		background-color: #fff
 		color: #000
+	&_min 
+		width: 76px
 
 .title
 	position: relative
@@ -246,23 +252,24 @@ nav
 			&:before
 				content: ''
 				display: block
-				width: 14px
-				height: 2px
+				width: 14px 
+				height: 2px 
 				background-color: $main-color
-				transition: 0.5s all
-			&:after
+				transition: 0.3s all
+			&:after 
 				content: ''
-				position: absolute
+				position: absolute 
 				left: 50%
 				transform: translateX(-50%)
-				display: block
+				display: block 
 				height: 14px
 				width: 2px
 				background-color: $main-color
-				transition: 0.5s all
-			&:hover
-				&:before, &:after
+				transition: 0.3s all
+			&:hover 
+				&:before, &:after 
 					background-color: $second-color
+
 
 .choice 
 	position: relative
@@ -288,6 +295,7 @@ nav
 		width: 100%
 		background-color: #070716
 		z-index: 1
+
 .require
 	padding: 68px 0 84px 0
 	&_block 
@@ -330,3 +338,90 @@ nav
 			li 
 				&:before
 					background: url('../icons/check_red.svg') center (center / cover) no-repeat
+.world 
+	position: relative
+	min-height: 717px
+	padding: 49px 0
+	background: url('../img/bg/map.jpg') center (center / cover) no-repeat
+	&_link 
+		position: absolute
+		left: 50%
+		transform: translateX(-50%)
+		bottom: 49px
+		text-align: center
+		font-size: 15px
+		font-weight: 400
+		line-height: 68px
+		text-transform: uppercase
+		color: #1fbad6
+		&:hover 
+			text-decoration: none
+			color: #fff
+footer 
+	padding: 14px 23px 39px 23px
+	a 
+		&:hover 
+			text-decoration: none
+.footer
+	&_divider
+		width: 299px
+		height: 4px
+		background-color: #1fbad6
+		margin: 0 auto
+	&_wrapper
+		display: flex 
+		justify-content: space-between
+		align-items: flex-start
+		padding-top: 32px
+	&_wrapper > div 
+		width: 33%
+		&:nth-child(3)
+			display: flex 
+			justify-content: flex-end
+	&_social
+		width: 160px
+		display: flex
+		justify-content: space-between
+		&_item 
+			display: flex 
+			justify-content: center
+			align-items: center
+			margin: 0 4px 
+			width: 32px
+			height: 32px
+			background-color: #070716
+			border-radius: 100%
+			i 
+				color: #fff
+	&_links
+		width: 390px
+		margin: 0 auto
+		&_main 
+			display: flex 
+			justify-content: space-between
+			padding: 0 10px
+			a 
+				color: #070716
+				font-size: 15px
+				font-weight: 300
+				text-transform: uppercase
+		&_sub 
+			display: flex 
+			justify-content: space-between
+			margin-top: 10px
+			a 
+				color: #999999
+				font-size: 11px
+				font-weight: 300
+				text-transform: uppercase
+		&_lang 
+			display: block 
+			margin: 0 auto
+			color: #1fbad6
+			font-size: 11px
+			font-weight: 400
+			margin-top: 19px
+			text-transform: uppercase
+			text-align: center
+
+	&_mobile
