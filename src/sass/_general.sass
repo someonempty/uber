@@ -1,10 +1,7 @@
-
-a
-	text-decoration: none		
-
 header
 	position: relative
 	height: 50px
+
 nav
 	position: fixed
 	width: 100%
@@ -33,6 +30,7 @@ nav
 		padding-right: 28px
 		&:last-child
 			border-right: none
+
 .subheader
 	position: absolute
 	top: 50px
@@ -64,6 +62,9 @@ nav
 		text-transform: uppercase
 		text-align: right
 		line-height: 12px
+		&:hover
+			text-decoration: none
+			color: #fff
 	&_btn
 		margin-top: 19px
 		width: 172px
@@ -77,7 +78,8 @@ nav
 		font-size: 14px
 		font-weight: 400
 		text-transform: uppercase
-		+btn_hover		
+		+btn_hover
+
 
 .promo
 	min-height: 800px
@@ -195,6 +197,7 @@ nav
 	z-index: 2
 	&_white 
 		color: #fff
+
 	
 .mobile 
 	min-height: 864px
@@ -416,5 +419,5 @@ footer
 			margin-top: 19px
 			text-transform: uppercase
 			text-align: center
-.xs-visible
+.xs-visible 
 	display: none
